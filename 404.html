@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'self'; form-action 'none'">
+  <meta name="robots" content="noindex">
   <base href="/showup/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found · Showup</title>
@@ -9,6 +11,7 @@
   <link rel="stylesheet" href="assets/site.css">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon.png" sizes="48x48">
+  <script type="module" src="assets/invite-landing.js"></script>
 </head>
 <body>
   <header class="site">
@@ -16,8 +19,21 @@
     <nav aria-label="Showup pages"><a href="./">Home</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="support/">Support</a><a href="delete-account/">Delete Account</a></nav>
   </header>
   <main>
-    <h1>Page not found</h1>
-    <p>That page doesn't exist. Try one of the links above, or go to the <a href="./">Showup home page</a>.</p>
+    <section id="not-found">
+      <h1>Page not found</h1>
+      <p>That page doesn't exist. Try one of the links above, or go to the <a href="./">Showup home page</a>.</p>
+    </section>
+    <section id="invite" hidden>
+      <p class="muted">You're invited to join a crew on Showup</p>
+      <h1>Join your friends on Showup</h1>
+      <p><a id="open-app" class="btn" href="./">Open in Showup</a></p>
+      <div class="card">
+        <p><strong>Don't have the app yet?</strong> Install it, then tap <em>Join with code</em> and enter:</p>
+        <p id="code" class="code"></p>
+        <a id="get-android" class="btn secondary" href="https://play.google.com/store/apps/details?id=online.afrozbuilds.showup">Get it on Google Play</a>
+      </div>
+      <p class="muted">Crews are private. Only members can see plans, attendance and photos.</p>
+    </section>
   </main>
   <footer>
     <nav aria-label="Showup pages"><a href="./">Home</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="support/">Support</a><a href="delete-account/">Delete Account</a></nav>
